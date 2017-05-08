@@ -31,7 +31,7 @@ public class UserRegister extends AppCompatActivity {
             public void onClick(View v) {
                 insertarUsuario();
                 Toast.makeText(getApplicationContext(), "GUARDADO CORRECTAMENTE", Toast.LENGTH_SHORT).show();
-                finish();
+                //finish();
             }
         });
     }

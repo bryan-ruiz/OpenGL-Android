@@ -31,9 +31,9 @@ public class BDHelper extends SQLiteOpenHelper {
     public static final String COLUMN_LOT_VERTICAL_SIZE = "vertical";
     public static final String COLUMN_LOT_TYPE_OF_CROP = "vertical";*/
 
-    public BDHelper(Context context) {
-        super(context, DATABASE_NAME, null, 1);
-    }
+        public BDHelper(Context context) {
+            super(context, DATABASE_NAME, null, 1);
+        }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -61,14 +61,12 @@ public class BDHelper extends SQLiteOpenHelper {
 
     }
 
-
     public void onUpgraded() {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("drop table if exists " + TABLE_USERS_NAME);
        /* db.execSQL("drop table if exists " + TABLE_PROPERTY_NAME);
         db.execSQL("drop table if exists " + TABLE_LOT_NAME);*/
         onCreate(db);
-
     }
 
     public boolean insertUser(String email, String name, String lastName, String password){

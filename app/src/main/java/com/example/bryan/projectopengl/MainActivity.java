@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText etEmail, etPassword;
     BDHelper MyDB;
+    String [] datos = {"a"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
